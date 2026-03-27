@@ -1,4 +1,59 @@
-# esp8266-lsd
-A beautiful styrimer and just a vibe screen 
-This project is completely Open Source. You can edit the code, please. If you edit, you can create branches, for example, for other displays. If you do it, I will be very grateful if you make it for a 16 by 3 display. I don’t have one, so I can’t do it. 
-Этот проект полностью Open Source Вы можете редактировать код пожалуйста если вы редактируйте можете создавать ветви например под другие дисплеи Если вы будете его делать Я очень буду благодарен если вы сделаете на дисплей 16 на 3 У меня такого нет поэтому я не смогу сделать
+# ESP8266 Smart LCD
+
+A flexible portable device based on ESP8266 that allows quick display of any text on a 1602 LCD screen using a button and web interface.
+
+**Русский** | [English](#english)
+
+---
+
+### Возможности
+
+- Вывод текста на LCD 1602
+- Гибкая система действий кнопки (одиночное, двойное, тройное нажатие, длинное удержание)
+- Полноценный веб-интерфейс для управления
+- Сохранение настроек в EEPROM
+- Режим точки доступа (AP) и подключение к Wi-Fi
+- Регулировка контраста
+
+### Схема подключения
+
+- LCD 1602 (I2C) → стандартное подключение (SDA=D2, SCL=D1)
+- Контраст (Vo) → GPIO0 (D3) через резистор
+- Кнопка → GPIO2 (D4) + GND
+
+### Как использовать
+
+1. Загрузите скетч на ESP8266
+2. Подключитесь к Wi-Fi сети `SmartLCD` (пароль `admin12345`)
+3. Откройте в браузере `192.168.4.1`
+4. Войдите под паролем `admin123`
+5. Настраивайте текст и действия кнопки
+
+---
+
+### English
+
+A flexible portable device based on ESP8266 that allows quick display of any text on a 1602 LCD screen using a button and web interface.
+
+### Features
+
+- Text output on 1602 LCD
+- Flexible button action system (single, double, triple click, long press)
+- Full web interface for control
+- Settings saved in EEPROM
+- Access Point + Station mode
+- Contrast adjustment
+
+### Hardware
+
+- LCD 1602 with I2C
+- Button on GPIO2 (D4)
+- Contrast control on GPIO0 (D3)
+
+### How to use
+
+1. Upload the sketch to ESP8266
+2. Connect to Wi-Fi `SmartLCD` (password `admin12345`)
+3. Open `192.168.4.1` in browser
+4. Login with password `admin123`
+5. Configure text and button actions
